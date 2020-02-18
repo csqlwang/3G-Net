@@ -232,8 +232,6 @@ class ResNet(nn.Module):
         self.AtMp2 = AtMp(256)
         self.AtMp3 = AtMp(256)
 
-        self.layer_final_dp = nn.Dropout(p=0.2)
-
         self.fc = nn.Linear(int(256*(256+1)/2), num_classes)
 
         for m in self.modules():
@@ -283,9 +281,7 @@ class ResNet(nn.Module):
         x = cov_forward(x)
         x = sqrt_forward(x,5)
         x = triu_forward(x)
-
-        x = self.layer_final_dp(x)
-
+           
         x = x.view(x.size(0), -1)
         x = self.fc(x)
 
