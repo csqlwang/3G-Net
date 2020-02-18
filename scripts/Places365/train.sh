@@ -12,7 +12,7 @@ fi
 
 python -u main.py \
        -a resnet18_365 \
-       -b 64 \
+       -b 256 \
        -j 16 \
        --epochs 115 \
        -p 100 \
