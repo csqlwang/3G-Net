@@ -17,6 +17,6 @@ python -u main.py \
        -j 16 \
        --epochs 115 \
        -p 100 \
-       --resume model_best_sample.pth.tar \
+       --resume model_best.pth.tar \
        /home/sdc1/dataset/ILSVRC2012/images | tee ./logs/${jobname}/record-train-${now}.txt \
 
