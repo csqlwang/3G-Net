@@ -96,7 +96,7 @@ def main():
     else:
         print("=> creating model '{}'".format(args.arch))
         model = models.__dict__[args.arch]()
-    '''
+    
     if args.gpu is not None:
         model = model.cuda(args.gpu)
     elif args.distributed:
@@ -108,8 +108,7 @@ def main():
             model.cuda()
         else:
             model = torch.nn.DataParallel(model).cuda()
-    '''
-    model = torch.nn.DataParallel(model).cuda()
+
     # define loss function (criterion) and optimizer
     criterion = nn.CrossEntropyLoss().cuda(args.gpu)
 
