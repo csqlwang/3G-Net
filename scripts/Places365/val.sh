@@ -17,6 +17,6 @@ python -u main-10-Crop.py \
        -j 16 \
        --epochs 115 \
        -p 100 \
-       --resume model_best_sample.pth.tar \
+       --resume model_best.pth.tar \
        /home/sdc1/dataset/places365_standard | tee ./logs/${jobname}/record-train-${now}.txt \
 
