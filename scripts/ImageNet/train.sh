@@ -1,7 +1,7 @@
 #!/bin/sh
 now=$(date +"%Y%m%d_%H%M%S")
 
-jobname=3G-ResNet18
+jobname=3G-ResNet18-ImageNet
 
 log_dir=logs/${jobname}
 
