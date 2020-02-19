@@ -31,24 +31,28 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 - GPU: GTX 2080Ti/TiTan XP
 
 ### Start Up
-
-#### Train on ImageNet
-
-You can run `sh ./scripts/ImageNet/train.sh` to train and run `sh ./scripts/ImageNet/val.sh` to evaluate.
+You can change the experimental hyperparameters in `tran.sh`or `val.sh`at `scripts`.
 
 ```
 python -u main.py \
-       -a resnet18 \
-       -b 64 \
-       -j 16 \
-       --epochs 115 \
-       -p 100 \
-       --resume checkpoint.pth.tar \
-       /home/sdc1/dataset/ILSVRC2012/images | tee ./logs/${jobname}/record-train-${now}.txt \ 
+       -a resnet18 \        #arch
+       -b 64 \              #batchsize
+       -j 16 \              #worker
+       --lr 0.1 \           #initial learning rate
+       --wd 1e-4 \          #weight decay
+       --epochs 115 \       #epoch
+       -p 100 \             #print frequency
+       --resume checkpoint.pth.tar \     #path to latest checkpoint
+       dataset address | tee ./logs/${jobname}/record-train-${now}.txt \ 
 ```
 
+
+#### Train on ImageNet
+
+You can run ` sh ./scripts/ImageNet/train.sh ` to train and run ` sh ./scripts/ImageNet/val.sh ` to evaluate.
+
 #### Train on Places365
-You can run the `./scripts/Places365/train.sh` to train and run `./scripts/Places365/val.sh` to evaluate.
+You can run ` sh ./scripts/Places365/train.sh ` to train and run ` sh ./scripts/Places365/val.sh ` to evaluate.
 
 ## Experiments
 
