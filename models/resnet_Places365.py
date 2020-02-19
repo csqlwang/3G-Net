@@ -2,8 +2,8 @@ import torch.nn as nn
 import math
 import torch.utils.model_zoo as model_zoo
 import torch
-__all__ = ['ResNet_365', 'resnet18_365', 'resnet34_365', 'resnet23_365', 'resnet50_365', 'resnet101_365',
-           'resnet152_365']
+__all__ = ['ResNet_3G_365', 'resnet18_3g_365', 'resnet34_3g_365', 'resnet23_3g_365', 'resnet50_3g_365', 'resnet101_3g_365',
+           'resnet152_3g_365']
 
 
 
@@ -211,11 +211,11 @@ class Bottleneck(nn.Module):
         return out
 
 
-class ResNet_365(nn.Module):
+class ResNet_3G_365(nn.Module):
 
     def __init__(self, block, layers, num_classes=365):
         self.inplanes = 64
-        super(ResNet_365, self).__init__()
+        super(ResNet_3G_365, self).__init__()
         self.conv1 = nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3,
                                bias=False)
         self.bn1 = nn.BatchNorm2d(64)
@@ -288,47 +288,47 @@ class ResNet_365(nn.Module):
         return x
 
 
-def resnet18_365(pretrained=False, **kwargs):
-    """Constructs a ResNet-18 model.
+def resnet18_3g_365(pretrained=False, **kwargs):
+    """Constructs a 3G-ResNet-18 model.
     """
     print("Run 3G-Net using ResNet-18 as backbone model on Places365")
-    model = ResNet_365(BasicBlock, [2, 2, 2, 2], **kwargs)
+    model = ResNet_3G_365(BasicBlock, [2, 2, 2, 2], **kwargs)
     return model
 
 
-def resnet34_365(pretrained=False, **kwargs):
-    """Constructs a ResNet-34 model.
+def resnet34_3g_365(pretrained=False, **kwargs):
+    """Constructs a 3G-ResNet-34 model.
     """
     print("Run 3G-Net using ResNet-34 as backbone model on Places365")
-    model = ResNet_365(BasicBlock, [3, 4, 6, 3], **kwargs)
+    model = ResNet_3G_365(BasicBlock, [3, 4, 6, 3], **kwargs)
     return model
 
-def resnet23_365(pretrained=False, **kwargs):
-    """Constructs a ResNet-23 model.
+def resnet23_3g_365(pretrained=False, **kwargs):
+    """Constructs a 3G-ResNet-23 model.
     """
     print("Run 3G-Net using ResNet-23 as backbone model on Places365")
-    model = ResNet_365(Bottleneck, [1, 2, 2, 2], **kwargs)
+    model = ResNet_3G_365(Bottleneck, [1, 2, 2, 2], **kwargs)
     return model
 
-def resnet50_365(pretrained=False, **kwargs):
-    """Constructs a ResNet-50 model.
+def resnet50_3g_365(pretrained=False, **kwargs):
+    """Constructs a 3G-ResNet-50 model.
     """
     print("Run 3G-Net using ResNet-50 as backbone model on Places365")
-    model = ResNet_365(Bottleneck, [3, 4, 6, 3], **kwargs)
+    model = ResNet_3G_365(Bottleneck, [3, 4, 6, 3], **kwargs)
     return model
 
 
-def resnet101_365(pretrained=False, **kwargs):
-    """Constructs a ResNet-101 model.
+def resnet101_3g_365(pretrained=False, **kwargs):
+    """Constructs a 3G-ResNet-101 model.
     """
     print("Run 3G-Net using ResNet-101 as backbone model on Places365")
-    model = ResNet_365(Bottleneck, [3, 4, 23, 3], **kwargs)
+    model = ResNet_3G_365(Bottleneck, [3, 4, 23, 3], **kwargs)
     return model
 
 
-def resnet152_365(pretrained=False, **kwargs):
-    """Constructs a ResNet-152 model.
+def resnet152_3g_365(pretrained=False, **kwargs):
+    """Constructs a 3G-ResNet-152 model.
     """
     print("Run 3G-Net using ResNet-152 as backbone model on Places365")
-    model = ResNet_365(Bottleneck, [3, 8, 36, 3], **kwargs)
+    model = ResNet_3G_365(Bottleneck, [3, 8, 36, 3], **kwargs)
     return model
