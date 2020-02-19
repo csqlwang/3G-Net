@@ -11,7 +11,7 @@ if [ ! -d $log_dir ]; then
 fi
 
 python -u main.py \
-       -a 3g_resnet18_365 \
+       -a resnet18_3g_365 \
        -b 256 \
        -j 16 \
        --lr 0.1 \
