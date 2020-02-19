@@ -16,21 +16,22 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
       year={2019}
     }
 
-## Installation
-
-### Requirements
-
-- Python 3.5+
-- PyTorch 1.0+
-
-### Our environments
+## Our environments
 
 - OS: Ubuntu 16.04
 - CUDA: 9.0/10.0
 - Toolkit: PyTorch 1.0/1.1
 - GPU: GTX 2080Ti/TiTan XP
 
-### Start Up
+## Install
+
+1.pytorch installation following [pytorch.org](https://pytorch.org/)
+
+2.`conda install numpy`
+
+3.`conda install torchvision`
+
+## Start Up
 You can change the experimental hyperparameters in `tran.sh`or `val.sh`at `scripts`.
 
 ```
@@ -47,11 +48,11 @@ python -u main.py \
 ```
 
 
-#### Train on ImageNet
+### Train on ImageNet
 
 You can run ` sh ./scripts/ImageNet/train.sh ` to train and run ` sh ./scripts/ImageNet/val.sh ` to evaluate.
 
-#### Train on Places365
+### Train on Places365
 You can run ` sh ./scripts/Places365/train.sh ` to train and run ` sh ./scripts/Places365/val.sh ` to evaluate.
 
 ## Experiments
