@@ -32,7 +32,7 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 3.`conda install torchvision`
 
 ## Start Up
-You can change the experimental hyperparameters in `tran.sh`or `val.sh`at `scripts`.
+You can change the experimental hyperparameters in `trian.sh`or `val.sh`at `scripts`.
 
 ```
 python -u main.py \
@@ -48,11 +48,11 @@ python -u main.py \
 ```
 
 
-### Train on ImageNet
+### Train or Val on ImageNet
 
 You can run ` sh ./scripts/ImageNet/train.sh ` to train and run ` sh ./scripts/ImageNet/val.sh ` to evaluate.
 
-### Train on Places365
+### Train or Val on Places365
 You can run ` sh ./scripts/Places365/train.sh ` to train and run ` sh ./scripts/Places365/val.sh ` to evaluate.
 
 ## Experiments
