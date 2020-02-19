@@ -11,7 +11,7 @@ if [ ! -d $log_dir ]; then
 fi
 
 python -u main-10-Crop.py \
-       -a 3g_resnet18_365 \
+       -a resnet18_3g_365 \
        -e \
        -b 64 \
        -j 16 \
