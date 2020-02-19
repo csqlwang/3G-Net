@@ -31,6 +31,8 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 
 3.`conda install torchvision`
 
+3.`conda install pillow==6.1`
+
 ## Start Up
 You can change the experimental hyperparameters in `trian.sh`or `val.sh`at `scripts`.
 
