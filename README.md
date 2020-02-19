@@ -4,7 +4,7 @@ This is an implementation of 3G-Net ([paper](http://openaccess.thecvf.com/conten
 ## Introduction
 Recently, global covariance pooling (GCP) has shown great advance in improving classification performance of deep convolutional neural networks (CNNs). However, existing deep GCP networks compute covariance pooling of convolutional activations with assumption that activations are sampled from Gaussian distributions, which may not hold in practice and fails to fully characterize the statistics of activations. To handle this issue, this paper proposes a novel deep global generalized Gaussian network (3G-Net), whose core is to estimate a global covariance of generalized Gaussian for modeling the last convolutional activations. Compared with GCP in Gaussian setting, our 3G-Net assumes the distribution of activations follows a generalized Gaussian, which can capture more precise characteristics of activations. However, there exists no analytic solution for parameter estimation of generalized Gaussian, making our 3G-Net challenging. To this end, we first present a novel regularized maximum likelihood estimator for robust estimating covariance of generalized Gaussian, which can be optimized by a modified iterative re-weighted method. Then, to efficiently estimate the covariance of generaized Gaussian under deep CNN architectures, we approximate this re-weighted method by developing an unrolling re-weighted module and a square root covariance layer. In this way, 3GNet can be flexibly trained in an end-to-end manner. The experiments are conducted on large-scale ImageNet-1K and Places365 datasets, and the results demonstrate our 3G-Net outperforms its counterparts while achieving very competitive performance to state-of-the-arts.
 
-
+![Net](https://github.com/csqlwang/3G-Net/blob/master/3G-Net.png)
 
 ## Citation
 
@@ -34,7 +34,18 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 
 #### Train on ImageNet
 
-You can run the `./scripts/ImageNet/train.sh` to train and run `./scripts/ImageNet/val.sh` to evaluate.
+You can run `sh ./scripts/ImageNet/train.sh` to train and run `sh ./scripts/ImageNet/val.sh` to evaluate.
+
+```
+python -u main.py \
+       -a resnet18 \
+       -b 64 \
+       -j 16 \
+       --epochs 115 \
+       -p 100 \
+       --resume checkpoint.pth.tar \
+       /home/sdc1/dataset/ILSVRC2012/images | tee ./logs/${jobname}/record-train-${now}.txt \ 
+```
 
 #### Train on Places365
 You can run the `./scripts/Places365/train.sh` to train and run `./scripts/Places365/val.sh` to evaluate.
