@@ -34,6 +34,8 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 ## Start Up
 You can change the experimental hyperparameters in `trian.sh`or `val.sh`at `scripts`.
 
+You must change the `dataset address` before you run the `train.sh` or `val.sh`.
+
 ```
 python -u main.py \
        -a resnet18 \        #arch
