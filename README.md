@@ -13,7 +13,7 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
       title={Deep global generalized Gaussian networks},
       author={Wang, Qilong and Li, Peihua and Hu, Qinghua and Zhu, Pengfei and Zuo, Wangmeng},
       booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-      pages={5080--5088},
+      pages={5080-5088},
       year={2019}
     }
 
