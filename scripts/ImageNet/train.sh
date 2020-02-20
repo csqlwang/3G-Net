@@ -1,7 +1,7 @@
 #!/bin/sh
 now=$(date +"%Y%m%d_%H%M%S")
 
-jobname=3G-ResNet18-ImageNet
+jobname=ResNet50-3G-ImageNet
 
 log_dir=logs/${jobname}
 
@@ -11,7 +11,7 @@ if [ ! -d $log_dir ]; then
 fi
 
 python -u main.py \
-       -a resnet18_3g \
+       -a resnet50_3g \
        -b 256 \
        -j 16 \
        --lr 0.1 \
