@@ -24,7 +24,7 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 - Toolkit: PyTorch 1.0/1.1
 - GPU: GTX 2080Ti/TiTan XP
 
-## Install
+## Installation
 
 1.pytorch installation following [pytorch.org](https://pytorch.org/)
 
@@ -36,22 +36,25 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 
 ## Usage
 
-1. Training on ImageNet: directly run ` sh ./scripts/ImageNet/train.sh `
-2. Testing on ImageNet: directly run ` sh ./scripts/ImageNet/val.sh `
-3. Training on Places365: directly run ` sh ./scripts/Places365/train.sh `
-4. Testing on Places365: directly run ` sh ./scripts/Places365/val.sh `
+1. Training on ImageNet: run ` sh ./scripts/ImageNet/train.sh `
 
-*Note that your need to modify  the `dataset path` in `train.sh` or `val.sh` for fitting your configurations.
+2. Testing on ImageNet:  run ` sh ./scripts/ImageNet/val.sh `
+
+3. Training on Places365:  run ` sh ./scripts/Places365/train.sh `
+
+4. Testing on Places365:  run ` sh ./scripts/Places365/val.sh `
+
+*Note that your need to modify  the `dataset path` or `model name` in `train.sh` or `val.sh` for fitting your configurations.
 
 ## Main Results and Models 
 
-### ImageNet
+### ImageNet (in 1-Crop testing)
 |Models|Top-1 err.(%)|Top-5 err.(%)|BaiduDrive(models)|Extract code|GoogleDrive|
 |:----:|:-----------:|:-----------:|:----------------:|:----------:|:---------:|
 |3G-ResNet-50|21.34|5.70|[3g_resnet50_ImageNet](https://pan.baidu.com/s/1C8uNk0PJCanDaNwol0gR1Q)|74ot|[3g_resnet50_ImageNet](https://drive.google.com/open?id=1hN8Q5rlIOQa0YYkcen9jpN9YatPB1j4D)|
 |3G-ResNet-101|20.40|5.21|[3g_resnet101_ImageNet](https://pan.baidu.com/s/1J9f39L0FXRlqxORMa0OkJg)|wmzp|[3g_resnet101_ImageNet](https://drive.google.com/open?id=14vJLFYqlRJyiIHjoG0lOm0RhB1NRF4Xc)|
 
-### Places365
+### Places365 (in 10-Crop testing)
 |Models|Top-1 err.(%)|Top-5 err.(%)|BaiduDrive(models)|Extract code|GoogleDrive|
 |:----:|:-----------:|:-----------:|:----------------:|:----------:|:---------:|
 |3G-ResNet-50|43.07|13.44|[3g_resnet50_Places365](https://pan.baidu.com/s/19da3ZDTZS0AtGP7FjDryvw)|fnkt|[3g_resnet50_Places365](https://drive.google.com/open?id=1VMVw35h-iW-d4AYH6ecV58_kECDyNzib)|
