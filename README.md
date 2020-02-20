@@ -4,6 +4,7 @@ This is an implementation of CVPR19 paper ([Deep Global Generalized Gaussian Net
 ## Introduction
 Recently, global covariance pooling (GCP) has shown great advance in improving classification performance of deep convolutional neural networks (CNNs). However, existing deep GCP networks compute covariance pooling of convolutional activations with assumption that activations are sampled from Gaussian distributions, which may not hold in practice and fails to fully characterize the statistics of activations. To handle this issue, this paper proposes a novel deep global generalized Gaussian network (3G-Net), whose core is to estimate a global covariance of generalized Gaussian for modeling the last convolutional activations. Compared with GCP in Gaussian setting, our 3G-Net assumes the distribution of activations follows a generalized Gaussian, which can capture more precise characteristics of activations. However, there exists no analytic solution for parameter estimation of generalized Gaussian, making our 3G-Net challenging. To this end, we first present a novel regularized maximum likelihood estimator for robust estimating covariance of generalized Gaussian, which can be optimized by a modified iterative re-weighted method. Then, to efficiently estimate the covariance of generaized Gaussian under deep CNN architectures, we approximate this re-weighted method by developing an unrolling re-weighted module and a square root covariance layer. In this way, 3GNet can be flexibly trained in an end-to-end manner. The experiments are conducted on large-scale ImageNet-1K and Places365 datasets, and the results demonstrate our 3G-Net outperforms its counterparts while achieving very competitive performance to state-of-the-arts.
 
+## Overview
 ![Net](https://github.com/csqlwang/3G-Net/blob/master/3G-Net.png)
 
 ## Citation
@@ -33,33 +34,16 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 
 3.`conda install pillow==6.1`
 
-## Start Up
-You can change the experimental hyperparameters in `trian.sh`or `val.sh`at `scripts`.
+## Usage
 
-You must change the `dataset address` before you run the `train.sh` or `val.sh`.
+1. Training on ImageNet: directly run ` sh ./scripts/ImageNet/train.sh `
+2. Testing on ImageNet: directly run ` sh ./scripts/ImageNet/val.sh `
+3. Training on Places365: directly run ` sh ./scripts/Places365/train.sh `
+4. Testing on Places365: directly run ` sh ./scripts/Places365/val.sh `
 
-```
-python -u main.py \
-       -a resnet18 \        #arch
-       -b 64 \              #batchsize
-       -j 16 \              #worker
-       --lr 0.1 \           #initial learning rate
-       --wd 1e-4 \          #weight decay
-       --epochs 115 \       #epoch
-       -p 100 \             #print frequency
-       --resume checkpoint.pth.tar \     #path to latest checkpoint
-       dataset address | tee ./logs/${jobname}/record-train-${now}.txt \ 
-```
+*Note that your need to modify  the `dataset path` in `train.sh` or `val.sh` for fitting your configurations.
 
-
-### Train or Val on ImageNet
-
-You can run ` sh ./scripts/ImageNet/train.sh ` to train and run ` sh ./scripts/ImageNet/val.sh ` to evaluate.
-
-### Train or Val on Places365
-You can run ` sh ./scripts/Places365/train.sh ` to train and run ` sh ./scripts/Places365/val.sh ` to evaluate.
-
-## Results and Models 
+## Main Results and Models 
 
 ### ImageNet
 |Models|Top-1 err.(%)|Top-5 err.(%)|BaiduDrive(models)|Extract code|GoogleDrive|
@@ -74,7 +58,7 @@ You can run ` sh ./scripts/Places365/train.sh ` to train and run ` sh ./scripts/
 |3G-ResNet-101|42.82|13.00|[3g_resnet101_Places365](https://pan.baidu.com/s/17N5edFaP1B5YTaWS6ajT0Q)|1dd9|[3g_resnet101_Places365](https://drive.google.com/open?id=1dOCeQkLBwR3AJSiH8w1qTq9-kT00T7_G)|
 
 ## Acknowledgments
-We would like to thank the teams behind the [iSQRT-COV](https://github.com/jiangtaoxie/fast-MPN-COV) for providing a nice code, and our code is based on it.
+We would like to thank the team behind the [iSQRT-COV](https://github.com/jiangtaoxie/fast-MPN-COV) for providing a nice code, and our code is based on it.
 
 ## Contact
 If you have any questions or suggestions, please feel free to contact us: qlwang@tju.edu.cn; li_zhang@tju.edu.cn.
