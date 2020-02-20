@@ -1,7 +1,7 @@
 #!/bin/sh
 now=$(date +"%Y%m%d_%H%M%S")
 
-jobname=3G-ResNet18-Places365
+jobname=ResNet50-3G-Places365
 
 log_dir=logs/${jobname}
 
@@ -11,12 +11,12 @@ if [ ! -d $log_dir ]; then
 fi
 
 python -u main.py \
-       -a resnet18_3g_365 \
+       -a resnet50_3g_365 \
        -b 256 \
        -j 16 \
        --lr 0.1 \
        --wd 1e-4 \
-       --epochs 115 \
+       --epochs 55 \
        -p 100 \
        --resume checkpoint.pth.tar \
        /home/sdc1/dataset/places365_standard | tee ./logs/${jobname}/record-train-${now}.txt \ 
