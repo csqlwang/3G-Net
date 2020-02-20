@@ -1,7 +1,7 @@
 #!/bin/sh
 now=$(date +"%Y%m%d_%H%M%S")
 
-jobname=3G-ResNet18-Test-ImageNet
+jobname=ResNet50-3G-Test-ImageNet
 
 log_dir=logs/${jobname}
 
@@ -11,7 +11,7 @@ if [ ! -d $log_dir ]; then
 fi
 
 python -u main.py \
-       -a resnet18_3g \
+       -a resnet50_3g \
        -e \
        -b 256 \
        -j 16 \
@@ -19,6 +19,6 @@ python -u main.py \
        --wd 1e-4 \
        --epochs 115 \
        -p 100 \
-       --resume model_best.pth.tar \
+       --resume ResNet50-3G-ImageNet.pth.tar \
        /home/sdc1/dataset/ILSVRC2012/images | tee ./logs/${jobname}/record-train-${now}.txt \
 
