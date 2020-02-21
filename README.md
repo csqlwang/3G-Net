@@ -51,14 +51,14 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 ### ImageNet (in 1-Crop testing)
 |Models|Top-1 err.(%)|Top-5 err.(%)|BaiduDrive(models)|Extract code|GoogleDrive|
 |:----:|:-----------:|:-----------:|:----------------:|:----------:|:---------:|
-|3G-ResNet-50|21.34|5.70|[3g_resnet50_ImageNet](https://pan.baidu.com/s/1C8uNk0PJCanDaNwol0gR1Q)|74ot|[3g_resnet50_ImageNet](https://drive.google.com/open?id=1hN8Q5rlIOQa0YYkcen9jpN9YatPB1j4D)|
-|3G-ResNet-101|20.40|5.21|[3g_resnet101_ImageNet](https://pan.baidu.com/s/1J9f39L0FXRlqxORMa0OkJg)|wmzp|[3g_resnet101_ImageNet](https://drive.google.com/open?id=14vJLFYqlRJyiIHjoG0lOm0RhB1NRF4Xc)|
+|ResNet50-3G|21.34|5.70|[ResNet50-3G-ImageNet](https://pan.baidu.com/s/1C8uNk0PJCanDaNwol0gR1Q)|74ot|[ResNet50-3G-ImageNet](https://drive.google.com/open?id=1hN8Q5rlIOQa0YYkcen9jpN9YatPB1j4D)|
+|ResNet101-3G|20.40|5.21|[ResNet101-3G-ImageNet](https://pan.baidu.com/s/1J9f39L0FXRlqxORMa0OkJg)|wmzp|[ResNet101-3G-ImageNet](https://drive.google.com/open?id=14vJLFYqlRJyiIHjoG0lOm0RhB1NRF4Xc)|
 
 ### Places365 (in 10-Crop testing)
 |Models|Top-1 err.(%)|Top-5 err.(%)|BaiduDrive(models)|Extract code|GoogleDrive|
 |:----:|:-----------:|:-----------:|:----------------:|:----------:|:---------:|
-|3G-ResNet-50|43.07|13.44|[3g_resnet50_Places365](https://pan.baidu.com/s/19da3ZDTZS0AtGP7FjDryvw)|fnkt|[3g_resnet50_Places365](https://drive.google.com/open?id=1VMVw35h-iW-d4AYH6ecV58_kECDyNzib)|
-|3G-ResNet-101|42.82|13.00|[3g_resnet101_Places365](https://pan.baidu.com/s/17N5edFaP1B5YTaWS6ajT0Q)|1dd9|[3g_resnet101_Places365](https://drive.google.com/open?id=1dOCeQkLBwR3AJSiH8w1qTq9-kT00T7_G)|
+|ResNet50-3G|43.07|13.44|[ResNet50-3G-Places365](https://pan.baidu.com/s/19da3ZDTZS0AtGP7FjDryvw)|fnkt|[ResNet50-3G-Places365](https://drive.google.com/open?id=1VMVw35h-iW-d4AYH6ecV58_kECDyNzib)|
+|ResNet101-3G|42.82|13.00|[ResNet101-3G-Places365](https://pan.baidu.com/s/17N5edFaP1B5YTaWS6ajT0Q)|1dd9|[ResNet101-3G-Places365](https://drive.google.com/open?id=1dOCeQkLBwR3AJSiH8w1qTq9-kT00T7_G)|
 
 ## Acknowledgments
 We would like to thank the team behind the [iSQRT-COV](https://github.com/jiangtaoxie/fast-MPN-COV) for providing a nice code, and our code is based on it.
