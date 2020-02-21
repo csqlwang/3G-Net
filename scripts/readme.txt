@@ -1,4 +1,4 @@
------------------------parameter modification-----------------------
+----------------------------------------------parameter modification----------------------------------------------
 
 now=$(date +"%Y%m%d_%H%M%S")
 
@@ -12,23 +12,24 @@ if [ ! -d $log_dir ]; then
   mkdir -p $log_dir
 fi
 
-### train  
+### train or val 
 python -u main.py \
-       -a resnet50_3g \			#models
-       -b 256 \				#batchsize
-       -j 16 \				#worker
-       --lr 0.1 \			#init learning rate
-       --wd 1e-4 \			#weight decay
-       --epochs 115 \			#total epochs
-       -p 100 \				#print frequency
+       -a resnet50_3g \			          #models
+       -b 256 \				                #batchsize
+       -e \                           #evaluate model on validation set
+       -j 16 \				                #worker
+       --lr 0.1 \			                #init learning rate
+       --wd 1e-4 \                    #weight decay
+       --epochs 115 \			            #total epochs
+       -p 100 \				                #print frequency
        --resume checkpoint.pth.tar \	#path to latest checkpoint
        /home/sdc1/dataset/ILSVRC2012/images | tee ./logs/${jobname}/record-train-${now}.txt \   #dataset path | output the log file
 
 
---------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 
 
-----------------modify the code about loading models----------------
+---------------------------------------modify the code about loading models---------------------------------------
 ### Original code
 if args.resume:
         if os.path.isfile(args.resume):
@@ -56,4 +57,4 @@ if args.resume:
             #      .format(args.resume, checkpoint['epoch']))
         else:
             print("=> no checkpoint found at '{}'".format(args.resume))
---------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
