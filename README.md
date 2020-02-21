@@ -45,6 +45,7 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 4. Testing on Places365:  run ` sh ./scripts/Places365/val.sh `
 
 *Note that your need to modify  the `dataset path` or `model name` in `train.sh` or `val.sh` for fitting your configurations. Other parameter modification please refer to the file `./scripts/readme.txt`.
+
 *If you test the download models, you need to modify the code about loading models in `main.py`. Because we only provide the parameters of the model. Specific operation you can refer to the file `./scripts/readme.txt`.
 
 ## Main Results and Models 
