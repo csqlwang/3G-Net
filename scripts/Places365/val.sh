@@ -13,7 +13,7 @@ fi
 python -u main-10-Crop.py \
        -a resnet50_3g_365 \
        -e \
-       -b 256 \
+       -b 64 \
        -j 16 \
        --lr 0.1 \
        --wd 1e-4 \
