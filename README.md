@@ -44,9 +44,7 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 
 4. Testing on Places365:  run ` sh ./scripts/Places365/val.sh `
 
-*Note that your need to modify  the `dataset path` or `model name` in `train.sh` or `val.sh` for fitting your configurations. Please refer to the file `./scripts/readme.txt` for modifying other parameters.
-
-*If you would like to test the following pre-trained models, you need to modify the loading code in `main.py` as suggested in the file `./scripts/readme.txt`.
+*Note that you need to modify  the `dataset path` or `model name` in `train.sh` or `val.sh` for fitting your configurations, and D、descriptions on other parameters can be found in the file `./scripts/readme.txt` for modifying.
 
 ## Main Results and Models 
 
@@ -61,6 +59,8 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 |:----:|:-----------:|:-----------:|:----------------:|:----------:|:---------:|
 |ResNet50-3G|43.07|13.44|[ResNet50-3G-Places365](https://pan.baidu.com/s/19da3ZDTZS0AtGP7FjDryvw)|fnkt|[ResNet50-3G-Places365](https://drive.google.com/open?id=1VMVw35h-iW-d4AYH6ecV58_kECDyNzib)|
 |ResNet101-3G|42.82|13.00|[ResNet101-3G-Places365](https://pan.baidu.com/s/17N5edFaP1B5YTaWS6ajT0Q)|1dd9|[ResNet101-3G-Places365](https://drive.google.com/open?id=1dOCeQkLBwR3AJSiH8w1qTq9-kT00T7_G)|
+
+*If you would like to test the above pre-trained models, the loading code in `main.py` needs to be modified as suggested in the file `./scripts/readme.txt`.
 
 ## Acknowledgments
 We would like to thank the team behind the [iSQRT-COV](https://github.com/jiangtaoxie/fast-MPN-COV) for providing a nice code, and our code is based on it.
