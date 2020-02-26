@@ -19,7 +19,7 @@ python -u Train-ImageNet.py \
        --wd 1e-4 \
        --epochs 115 \
        -p 100 \
-       --resume ResNet50-3G-ImageNet.pth.tar \
+       --resume model_best.pth.tar \
        /home/sdc1/dataset/ILSVRC2012/images | tee ./logs/${jobname}/record-train-${now}.txt \
 
 
