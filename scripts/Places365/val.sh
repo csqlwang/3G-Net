@@ -10,7 +10,7 @@ if [ ! -d $log_dir ]; then
   mkdir -p $log_dir
 fi
 
-python -u main-10-Crop.py \
+python -u Train-Places365-10-Crop.py \
        -a resnet50_3g_365 \
        -e \
        -b 64 \
