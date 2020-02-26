@@ -10,7 +10,7 @@ if [ ! -d $log_dir ]; then
   mkdir -p $log_dir
 fi
 
-python -u main.py \
+python -u Train-ImageNet.py \
        -a resnet50_3g \
        -e \
        -b 256 \
