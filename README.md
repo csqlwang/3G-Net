@@ -60,7 +60,13 @@ Recently, global covariance pooling (GCP) has shown great advance in improving c
 |ResNet50-3G|43.07|13.44|[ResNet50-3G-Places365](https://pan.baidu.com/s/19da3ZDTZS0AtGP7FjDryvw)|fnkt|[ResNet50-3G-Places365](https://drive.google.com/open?id=1VMVw35h-iW-d4AYH6ecV58_kECDyNzib)|
 |ResNet101-3G|42.82|13.00|[ResNet101-3G-Places365](https://pan.baidu.com/s/17N5edFaP1B5YTaWS6ajT0Q)|1dd9|[ResNet101-3G-Places365](https://drive.google.com/open?id=1dOCeQkLBwR3AJSiH8w1qTq9-kT00T7_G)|
 
-*If you would like to use or evaluate above pre-trained models, code for loading models in `main.py` needs to be modified as suggested in file `./scripts/readme.txt`.
+*If you would like to use or evaluate above pre-trained models, please do the following:
+
+1. Download the pre-trained models.
+
+2. Testing on ImageNet:  run ` sh ./scripts/ImageNet/val-download.sh` 
+
+3. Testing on Places365:  run ` sh ./scripts/Places365/val-download.sh`
 
 ## Acknowledgments
 We would like to thank the team behind the [iSQRT-COV](https://github.com/jiangtaoxie/fast-MPN-COV) for providing a nice code, and our code is based on it.
