@@ -12,7 +12,7 @@ fi
 
 python -u main.py \
        -a resnet50_3g \
-       -b 64 \
+       -b 256 \
        -j 16 \
        --lr 0.1 \
        --wd 1e-4 \
