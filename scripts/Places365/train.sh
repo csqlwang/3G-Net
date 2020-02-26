@@ -10,7 +10,7 @@ if [ ! -d $log_dir ]; then
   mkdir -p $log_dir
 fi
 
-python -u main.py \
+python -u Train-Places365.py \
        -a resnet50_3g_365 \
        -b 256 \
        -j 16 \
