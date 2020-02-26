@@ -19,6 +19,6 @@ python -u Test-Places365-10-Crop.py \
        --wd 1e-4 \
        --epochs 55 \
        -p 100 \
-       --resume ResNet50-3G-Places365.pth.tar \
+       --resume model_best.pth.tar \
        /home/sdc1/dataset/places365_standard | tee ./logs/${jobname}/record-train-${now}.txt \
 
